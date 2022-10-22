@@ -1,0 +1,68 @@
+I"h<h2 id="a-pythonist-is-born">A Pythonist is born</h2>
+
+<p>Long time ago, a Process Engineer in the middle of nowhere, struggles with the short time he has to analyze several Excel files. He notices that he is doing the same 12 actions file after file wasting his time.</p>
+
+<p>“How could I shorten these repetitions?” He wondered.</p>
+
+<p>Luckily to him, there is a magical solution beyond his power (at that time…) that might help him to diminish his time.</p>
+
+<p><img src="/assets/media/excel_to_python.png" alt="From Excel to Python" /></p>
+
+<h2 id="from-my-point-of-view-at-last">From my point of view (at last)</h2>
+
+<p>Enough with the <strong>dungeons and dragons</strong> thing.</p>
+
+<p>A couple of years ago, I realized that my time to analysis was about one hour after downloading all the Excel files from work’s database. This is a long time to keep doing repetitive filtering actions.</p>
+
+<p>Thus, I started to look that a programming languages could allow me to set some rules to avoid these repetitions.
+I found that Python could be the one.</p>
+
+<h2 id="where-to-study-it">Where to study it?</h2>
+
+<p>The first option was to engage myself to a course in ITBA University. Despite the fact that it was oriented to Finances, it allowed me to learn the basic data types and discover <a href="https://pandas.pydata.org">Pandas</a> library.</p>
+
+<p><img src="/assets/media/pandas.png" alt="Pandas" /></p>
+
+<h2 id="how-do-i-solve-the-long-time">How do I solve the long time?</h2>
+
+<p>With Pandas I could apply all the filtering work inside the Excel report:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span> <span class="c1"># this is a standard way
+</span>
+<span class="c1"># Define a funtion to filter all the necessary data
+</span><span class="k">def</span> <span class="nf">filter_file</span><span class="p">(</span><span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">:</span>
+    <span class="s">""" This function helps to solve the filtering long time """</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s">"work_file.xls"</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="n">column_1</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">column_1</span><span class="p">].</span><span class="nb">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="p">.</span>
+    <span class="p">.</span>
+    <span class="k">return</span> <span class="n">df_filtered</span>
+</code></pre></div></div>
+
+<p>And using <a href="https://docs.python.org/3/library/re.html">REGular EXpressions</a> operations and <a href="https://www.gnu.org/software/bash/manual/bash.html">Bash Scripting</a>, I could finally run my analysis faster than ever (<em><strong>minutes not hours!!</strong></em>):</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3 
+# That was the shebang for python
+</span>
+<span class="kn">from</span> <span class="nn">helper</span> <span class="kn">import</span> <span class="o">*</span> <span class="c1"># helper file, where the filters lay
+</span><span class="kn">import</span> <span class="nn">re</span> <span class="c1"># regex playing
+</span><span class="kn">import</span> <span class="nn">os</span> <span class="c1"># OS playing
+</span>
+<span class="n">regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s">"production report \([0-9]\)*.xlsx"</span>
+<span class="n">dirs</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">getcwd</span><span class="p">())</span>
+<span class="n">files</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">dirs</span><span class="p">))</span>
+
+<span class="n">lots</span> <span class="o">=</span> <span class="n">get_lots</span><span class="p">(</span><span class="n">files</span><span class="p">)</span> <span class="c1"># function from helper
+</span><span class="n">lots</span><span class="p">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s">"results.xlsx"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Not the best script, but come on! my first one :D</p>
+
+<h2 id="what-next">What next?</h2>
+
+<p>In next chapters, I’m going share the rest of the history (2 years and counting).</p>
+
+<p>I’m glad to meet you!</p>
+
+<h2 id="cheers-pablo"><em><strong>Cheers, Pablo.</strong></em></h2>
+:ET

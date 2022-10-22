@@ -1,9 +1,9 @@
-title: Hi! I'm Pablo
+title: Pablo's Knowledge Journey
 author:
   name: Pablo Segovia
   email: luispablosegovia@icloud.com
 description: > # this means to ignore newlines until "show_excerpts:"
-  Hi you all! In this blog you will find some #python things among others!
+  From Process Engineer to Python Developer (or who knows where in the middle...)
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
