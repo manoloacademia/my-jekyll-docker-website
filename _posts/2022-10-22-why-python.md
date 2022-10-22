@@ -12,7 +12,7 @@ Long time ago, a Process Engineer in the middle of nowhere, struggles with the s
 
 Luckily to him, there is a magical solution beyond his power (at that time...) that might help him to diminish his time.
 
-![From Excel to Python](/assets/media/excel_to_python.png)
+![From Excel to Python](<img width="518" alt="excel_to_python" src="https://user-images.githubusercontent.com/76537245/197362887-3abd02b4-60d9-4a04-ba96-2016b14fcb67.png">)
 
 ## From my point of view (at last)
 
@@ -27,7 +27,7 @@ I found that Python could be the one.
 
 The first option was to engage myself to a course in ITBA University. Despite the fact that it was oriented to Finances, it allowed me to learn the basic data types and discover [Pandas](https://pandas.pydata.org) library.
 
-![Pandas](/assets/media/pandas.png)
+![Pandas](<img width="340" alt="pandas" src="https://user-images.githubusercontent.com/76537245/197362894-a16ea4f1-d5ba-4536-b8af-a9d53b5b0db8.png">)
 
 ## How do I solve the long time?
 
