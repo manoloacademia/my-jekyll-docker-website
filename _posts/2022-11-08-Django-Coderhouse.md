@@ -76,24 +76,45 @@ class User_profile(models.Model):
 
 For style, color and stuff I used [Bootstrap](https://getbootstrap.com/) via CDN and HTML/CSS + Django Template languages.
 
-`templates/wines/wine_form.html`
+`templates/index.html`
 ``` html
-{% extends 'base.html' %}
-{%load crispy_forms_tags %}
-{% block title %}
-    <title>New Wine</title>
-{% endblock %}
-{% block content %}
-<div class="container">
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <div class="form-group">
-            {{ form|crispy }}
-        </div>
-        <input type="submit" value="Submit">
-    </form>
+<div class="jumbotron container">
+    <h1 class="display-4">WineStore</h1>
+    <p class="lead">Welcome to the best wine store around the world!!</p>
 </div>
-    {% endblock %}
+
+<section>
+
+    <div class="container ">
+        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="2000">
+                    <img src="https://i.pinimg.com/originals/81/03/11/810311031d2007d921cf126b3cd298b3.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                    <img src="https://daily.sevenfifty.com/app/uploads/2022/02/SFD_Lebanon-Beyond-Musar-by-Courtney-Schiessel_Lebanese-wines-on-ililis-wine-list_CO_ilili_Hero_2520x1420.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://post.healthline.com/wp-content/uploads/2022/05/wine-glass-hand-1200x628-facebook-1200x628.jpg" class="d-block w-100"
+                        alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval"
+                data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleInterval"
+                data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
 ```
 
 To see more in detail, please [check the video in this link](https://www.youtube.com/watch?v=2-M1FfZu5y8).
