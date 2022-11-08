@@ -102,5 +102,5 @@ To see more in detail, please [check the video in this link](https://www.youtube
 
 Let me know if you need more information about how to create structures, users, use the admin profiles, etcetera and etcetera.
 
-Thanks for your time on the reading.
+Thanks for your time on the reading :).
 ## *__Cheers, Pablo.__*
