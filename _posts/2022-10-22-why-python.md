@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why python being Process Engineer?"
+title: "Why python being a Process Engineer?"
 categories: personal
 ---
 
